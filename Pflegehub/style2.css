@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Weißer Hintergrund */
+    color: #333;
+    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+}
+header {
+    background-color: #ff0000; /* Roter Hintergrund für Header */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.logo {
+    width: 50px;
+}
+nav {
+    display: flex;
+}
+.menu-btn {
+    font-size: 24px; /* Größere Schrift für die drei Punkte */
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2; /* Setzt die Sidebar über den restlichen Inhalt */
+    background-color: rgba(0, 0, 0, 0.8); /* Tertiäre (schwarze) Hintergrundfarbe mit Transparenz */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px; /* Größere Schrift für das Menü */
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+.sidebar a:hover {
+    background-color: #575757;
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+}
+main {
+    padding: 20px;
+}
+footer {
+    background-color: #000000; /* Schwarzer Hintergrund für Footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#company-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.text-section {
+    flex: 1 1 45%;
+    margin: 10px;
+}
+.staff-section {
+    flex: 1 1 45%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.staff-member {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.staff-member img {
+    width: 150px; /* Begrenzte Breite der Bilder */
+    height: 150px; /* Begrenzte Höhe der Bilder */
+    border-radius: 50%;
+}
+.staff-member h3 {
+    margin-top: 10px;
+    font-size: 18px; /* Größere Schrift für Titel */
+    color: #ff0000;
+}
+.staff-member p {
+    font-size: 16px; /* Größere Schrift für Text */
+    color: #333;
+}
+@media (max-width: 768px) {
+    .text-section, .staff-section {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+    .staff-section {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Weißer Hintergrund */
+    color: #333;
+    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+    text-align: center; /* Zentriert den gesamten Text */
+}
+header {
+    background-color: #ff0000; /* Roter Hintergrund für Header */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.logo {
+    width: 50px;
+}
+nav {
+    display: flex;
+}
+.menu-btn {
+    font-size: 24px; /* Größere Schrift für die drei Punkte */
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2; /* Setzt die Sidebar über den restlichen Inhalt */
+    background-color: rgba(0, 0, 0, 0.8); /* Tertiäre (schwarze) Hintergrundfarbe mit Transparenz */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px; /* Größere Schrift für das Menü */
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+.sidebar a:hover {
+    background-color: #575757;
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+}
+main {
+    padding: 20px;
+}
+footer {
+    background-color: #000000; /* Schwarzer Hintergrund für Footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.menu-item {
+    position: relative;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    flex: 1 1 calc(33.333% - 20px); /* Für Querformat: 3 Bilder auf einer Höhe */
+    max-width: calc(33.333% - 20px);
+    text-align: center;
+}
+.menu-item img {
+    width: 200px; /* Feste Breite der Bilder */
+    height: 150px; /* Feste Höhe der Bilder */
+    margin: 0 auto; /* Zentriert die Bilder */
+}
+.menu-item h3 {
+    font-size: 24px; /* Größere Schrift für Titel */
+    margin: 10px 0;
+    color: #ff0000; /* Rot für Titel */
+}
+.menu-item p {
+    font-size: 18px; /* Größere Schrift für Text */
+    color: #333;
+    margin: 10px 0;
+    padding: 10px;
+}
+@media (max-width: 768px) {
+    .menu-item {
+        flex: 1 1 100%; /* Für Hochformat: 1 Bild pro Zeile */
+        max-width: 100%;
+    }
+}

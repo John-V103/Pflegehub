@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pflegeseite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="Bilder/logo2.JPG" alt="Pflegeseite Logo" class="logo">
+        <h1>Pflege Hub.de</h1>
+        <nav>
+            <a href="#" class="menu-btn" onclick="toggleMenu()">☰</a>
+        </nav>
+    </header>
+    <div id="sidebar" class="sidebar">
+        <a href="#" class="close-btn" onclick="toggleMenu()">×</a>
+        <a href="news/news.html">News</a>
+        <a href="info.html">Info</a>
+        <a href="games/menu.html">Spiele und Übungen</a>
+    </div>
+    <main>
+        <section id="articles">
+            <div id="article-container"></div>
+        </section>
+        <section id="games">
+            <h2>Lernspiele</h2>
+            <div class="game-container" onclick="location.href='games/menu.html'">
+                <img src="Bilder/games.jpg" alt="Lernspiele">
+                <h3>Lernspiele und Übungen</h3>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="agb.html">AGBs</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
